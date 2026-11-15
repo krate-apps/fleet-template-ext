@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "extensionId": "org.example.template",
+  "pages": [
+    {
+      "id": "home",
+      "title": "Template",
+      "route": "/ext/org.example.template/home"
+    }
+  ],
+  "panels": [
+    {
+      "id": "template",
+      "title": "Template",
+      "placement": "settings"
+    }
+  ],
+  "forms": [
+    {
+      "id": "template-settings",
+      "title": "Template settings",
+      "loadMethod": "ext.template.getSettings",
+      "submitMethod": "ext.template.saveSettings",
+      "fields": [
+        {
+          "name": "enabled",
+          "label": "Enabled",
+          "kind": "boolean",
+          "help": "Master switch for this template worker."
+        },
+        {
+          "name": "message",
+          "label": "Message",
+          "kind": "text",
+          "help": "Sample string stored via extension storage."
+        }
+      ],
+      "description": "Replace this form with your extension settings."
+    }
+  ]
+}

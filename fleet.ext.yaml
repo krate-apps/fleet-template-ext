@@ -1,0 +1,18 @@
+schema: 1
+id: org.example.template
+name: Template Extension
+description: Minimal Fleet extension template (worker + declarative UI).
+version: 0.1.0
+api: ">=1.0.0 <2.0.0"
+engines:
+  - rtorrent
+capabilities:
+  - storage.read
+  - storage.write
+frontend:
+  type: declarative
+  entry: ui/extension.json
+backend:
+  type: process
+  executable: bin/template-worker
+  protocol: jsonrpc-2
